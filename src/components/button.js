@@ -9,9 +9,13 @@ function Button (props) {
         padding: 5,
         fontSize: props.fontSize,
         marginLeft: props.marginLeft,
+        marginTop: props.marginTop,
+    }
+    const onClick = () => {
+        props.onClick();
     }
     return (
-        <button style={buttonStyle}>{props.text}</button>
+        <button onClick={onClick} style={buttonStyle}>{props.text}</button>
     );
 };
 

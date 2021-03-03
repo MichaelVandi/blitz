@@ -1,11 +1,16 @@
 import Title from './title';
-import { orderHistoryList } from './dummyData';
+import { orderHistoryList} from './dummyData';
 import History from './history';
 import Text from './text';
 
 
+
 // create a component
 const orderHistoryElements = [];
+// var actualCountryCodes = {
+
+// }
+// var listOfCountries = [];
 function OrderHistory () {
     orderHistoryList.forEach((item, index) => {
         console.log(index);
@@ -13,6 +18,22 @@ function OrderHistory () {
             <History history={item}/>
         )
     })
+
+    // samplePoints.forEach((item, index) => {
+    //     actualCountryCodes[item.CountryName.toString()] = {
+    //         countryName: item.CountryName.toString(),
+    //         entryPoint: item.EntryPoint,
+    //         port: item.Port,
+    //         completeUrl: item.PointPort,
+    //     }
+    //     listOfCountries.push(item.CountryName.toString());
+    // });
+    // Sort the list of countries
+    // listOfCountries.sort();
+    // Print
+    // console.log(JSON.stringify(actualCountryCodes));
+    // console.log(listOfCountries.toString());
+    // console.log(listOfCountries);
     console.log("Length: " + orderHistoryElements.length)
     return (
         <div style ={styles.container}>
