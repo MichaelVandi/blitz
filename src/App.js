@@ -1,3 +1,4 @@
+import React, { useState, useEffect } from 'react';
 import './App.css';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
@@ -8,6 +9,8 @@ import OrderHistory from './components/orderHistory';
 import UsageHistoryChart from './components/usageHistoryChart';
 import GenerateProxies from './components/generateProxies';
 import UsageProgressCircle from './components/usageProgressCircle';
+import History from './components/history';
+import { orderHistoryList } from './components/dummyData'
 
 const chartData = {
   labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec',],
@@ -26,6 +29,12 @@ const chartData = {
 
 function App() {
   // Two columns
+  const historyList = [];
+  // Get order history list
+  orderHistoryList.forEach((item, index) => {
+    console.log("I am doing");
+    historyList.push(<History history={item} key={index}/>)
+  })
   return (
     <div style={styles.background}>
       {/* Main Dashboard components */}
@@ -83,7 +92,7 @@ function App() {
               {/* Order History Goes here */}
               <Col md={3}>
                 <div style={styles.componentBackground}>
-                  <OrderHistory/>
+                  <OrderHistory historyList={historyList}/>
 
                 </div>
 

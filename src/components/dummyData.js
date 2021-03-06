@@ -4,36 +4,36 @@ export var orderHistoryList = [
         data: 2,
         transID: 'TNC0046'
     },
-    // {
-    //     date: '2021-01-15',
-    //     data: 5,
-    //     transID: 'TNC0056'
-    // },
-    // {
-    //     date: '2021-01-25',
-    //     data: 7,
-    //     transID: 'TNC0012'
-    // },
-    // {
-    //     date: '2021-01-65',
-    //     data: 2,
-    //     transID: 'TNC0007'
-    // },
-    // {
-    //     date: '2021-07-15',
-    //     data: 7,
-    //     transID: 'TNC0013'
-    // },
-    // {
-    //     date: '2021-03-25',
-    //     data: 3,
-    //     transID: 'TNC0013'
-    // },
-    // {
-    //     date: '2021-01-15',
-    //     data: 9,
-    //     transID: 'TNC0012'
-    // },
+    {
+        date: '2021-01-15',
+        data: 5,
+        transID: 'TNC0056'
+    },
+    {
+        date: '2021-01-25',
+        data: 7,
+        transID: 'TNC0012'
+    },
+    {
+        date: '2021-01-65',
+        data: 2,
+        transID: 'TNC0007'
+    },
+    {
+        date: '2021-07-15',
+        data: 7,
+        transID: 'TNC0013'
+    },
+    {
+        date: '2021-03-25',
+        data: 3,
+        transID: 'TNC0013'
+    },
+    {
+        date: '2021-01-15',
+        data: 9,
+        transID: 'TNC0012'
+    },
 ]
 
 // function newProxyAddressList(locationOption, proxyType, providerType, quantity)
@@ -343,336 +343,391 @@ export var countries = ["Afghanistan","Albania","Andorra","Angola","Argentina","
 "Trinidad and Tobago","Tunisia","Turkey","Turkmenistan","UAE","USA","Uganda","Ukraine","United Kingdom","Uruguay",
 "Uzbekistan","Venezuela","Vietnam","Yemen","Zambia","Zimbabwe"];
 
+export var stickyCountries = ["Argentina", "Australia", "Azerbaijan", "Belgium", "Brazil", "Canada", "Chile", "China", 
+"Colombia", "Denmark", "Denmark", "Ecuador", "Egypt", "France", "Gambia", "Germany", "Ghana", "Greece", "Honk Kong", 
+"India", "Indonesia", "Iran", "Israel", "Italy", "Japan", "Kazakhstan", "Malaysia", "Mexico", "Netherlands", "Pakistan", 
+"Peru", "Philippines", "Poland", "Portugal", "Random Country", "Russia", "Saudi Arabia", "Saudi Arabia", "Singapore", 
+"South Africa", "South Korea", "Spain", "Sweden", "Taiwan", "Thailand", "Turkey", "UAE", "USA", "Ukraine,", "United Kingdom"];
+
 export var countryInfo = {
     "Random Country": {
       "countryName": "Random Country",
       "entryPoint": "pr.oxylabs.io",
       "port": "7777",
-      "completeUrl": "pr.oxylabs.io:7777"
+      "completeUrl": "pr.oxylabs.io:7777",
+      "stickyUrl" : "pr.oxylabs.io:10000 - 49999"
     },
     "USA": {
       "countryName": "USA",
       "entryPoint": "us-pr.oxylabs.io",
       "port": "10000",
-      "completeUrl": "us-pr.oxylabs.io:10000"
+      "completeUrl": "us-pr.oxylabs.io:10000",
+      "stickyUrl": "us-pr.oxylabs.io:10001 - 19999",
     },
     "Canada": {
       "countryName": "Canada",
       "entryPoint": "ca-pr.oxylabs.io",
       "port": "30000",
-      "completeUrl": "ca-pr.oxylabs.io:30000"
+      "completeUrl": "ca-pr.oxylabs.io:30000",
+      "stickyUrl" : "ca-pr.oxylabs.io:30001 - 39999"
     },
     "United Kingdom": {
       "countryName": "United Kingdom",
       "entryPoint": "gb-pr.oxylabs.io",
       "port": "20000",
-      "completeUrl": "gb-pr.oxylabs.io:20000"
+      "completeUrl": "gb-pr.oxylabs.io:20000",
+      "stickyUrl" : "gb-pr.oxylabs.io:20001 - 29999"
     },
     "Germany": {
       "countryName": "Germany",
       "entryPoint": "de-pr.oxylabs.io",
       "port": "30000",
-      "completeUrl": "de-pr.oxylabs.io:30000"
+      "completeUrl": "de-pr.oxylabs.io:30000",
+      "stickyUrl" : "de-pr.oxylabs.io:30001 - 39999"
+      
     },
     "France": {
       "countryName": "France",
       "entryPoint": "fr-pr.oxylabs.io",
       "port": "40000",
-      "completeUrl": "fr-pr.oxylabs.io:40000"
+      "completeUrl": "fr-pr.oxylabs.io:40000",
+      "stickyUrl" : "fr-pr.oxylabs.io:40001 - 49999"
     },
     "Spain": {
       "countryName": "Spain",
       "entryPoint": "es-pr.oxylabs.io",
       "port": "10000",
-      "completeUrl": "es-pr.oxylabs.io:10000"
+      "completeUrl": "es-pr.oxylabs.io:10000",
+      "stickyUrl" : "es-pr.oxylabs.io:10001 - 19999"
     },
     "Italy": {
       "countryName": "Italy",
       "entryPoint": "it-pr.oxylabs.io",
       "port": "20000",
-      "completeUrl": "it-pr.oxylabs.io:20000"
+      "completeUrl": "it-pr.oxylabs.io:20000",
+      "stickyUrl" : "it-pr.oxylabs.io:20001 - 29999"
     },
     "Sweden": {
       "countryName": "Sweden",
       "entryPoint": "se-pr.oxylabs.io",
       "port": "30000",
-      "completeUrl": "se-pr.oxylabs.io:30000"
+      "completeUrl": "se-pr.oxylabs.io:30000",
+      "stickyUrl" : "se-pr.oxylabs.io:30001 - 39999",
     },
     "Greece": {
       "countryName": "Greece",
       "entryPoint": "gr-pr.oxylabs.io",
       "port": "40000",
-      "completeUrl": "gr-pr.oxylabs.io:40000"
+      "completeUrl": "gr-pr.oxylabs.io:40000",
+      "stickyUrl" : "gr-pr.oxylabs.io:40001 - 49999"
     },
     "Portugal": {
       "countryName": "Portugal",
       "entryPoint": "pt-pr.oxylabs.io",
       "port": "10000",
-      "completeUrl": "pt-pr.oxylabs.io:10000"
+      "completeUrl": "pt-pr.oxylabs.io:10000",
+      "stickyUrl" : "pt-pr.oxylabs.io:10001 - 19999"
     },
     "Netherlands": {
       "countryName": "Netherlands",
       "entryPoint": "nl-pr.oxylabs.io",
       "port": "20000",
-      "completeUrl": "nl-pr.oxylabs.io:20000"
+      "completeUrl": "nl-pr.oxylabs.io:20000",
+      "stickyUrl" : "nl-pr.oxylabs.io:20001 - 29999"
     },
     "Belgium": {
       "countryName": "Belgium",
       "entryPoint": "be-pr.oxylabs.io",
       "port": "30000",
-      "completeUrl": "be-pr.oxylabs.io:30000"
+      "completeUrl": "be-pr.oxylabs.io:30000",
+      "stickyUrl" : "be-pr.oxylabs.io:30001 - 39999"
     },
     "Russia": {
       "countryName": "Russia",
       "entryPoint": "ru-pr.oxylabs.io",
       "port": "40000",
-      "completeUrl": "ru-pr.oxylabs.io:40000"
+      "completeUrl": "ru-pr.oxylabs.io:40000",
+      "stickyUrl" : "ru-pr.oxylabs.io:40001 - 49999"
     },
     "Ukraine": {
       "countryName": "Ukraine",
       "entryPoint": "ua-pr.oxylabs.io",
       "port": "10000",
-      "completeUrl": "ua-pr.oxylabs.io:10000"
+      "completeUrl": "ua-pr.oxylabs.io:10000",
+      "stickyUrl" : "ua-pr.oxylabs.io:10001 - 19999"
     },
     "Poland": {
       "countryName": "Poland",
       "entryPoint": "pl-pr.oxylabs.io",
       "port": "20000",
-      "completeUrl": "pl-pr.oxylabs.io:20000"
+      "completeUrl": "pl-pr.oxylabs.io:20000",
+      "stickyUrl" : "pl-pr.oxylabs.io:20001 - 29999"
     },
     "Israel": {
       "countryName": "Israel",
       "entryPoint": "il-pr.oxylabs.io",
       "port": "20000",
-      "completeUrl": "il-pr.oxylabs.io:20000"
+      "completeUrl": "il-pr.oxylabs.io:20000",
+      "stickyUrl" : "il-pr.oxylabs.io:20001 - 29999"
     },
     "Turkey": {
       "countryName": "Turkey",
       "entryPoint": "tr-pr.oxylabs.io",
       "port": "3000",
-      "completeUrl": "tr-pr.oxylabs.io:3000"
+      "completeUrl": "tr-pr.oxylabs.io:3000",
+      "stickyUrl" : "tr-pr.oxylabs.io:30001 - 39999"
     },
     "Australia": {
       "countryName": "Australia",
       "entryPoint": "au-pr.oxylabs.io",
       "port": "40000",
-      "completeUrl": "au-pr.oxylabs.io:40000"
+      "completeUrl": "au-pr.oxylabs.io:40000",
+      "stickyUrl" : "au-pr.oxylabs.io:40001 - 49999"
     },
     "Malaysia": {
       "countryName": "Malaysia",
       "entryPoint": "my-pr.oxylabs.io",
       "port": "10000",
-      "completeUrl": "my-pr.oxylabs.io:10000"
+      "completeUrl": "my-pr.oxylabs.io:10000",
+      "stickyUrl" : "my-pr.oxylabs.io:10001 - 19999"
     },
     "Thailand": {
       "countryName": "Thailand",
       "entryPoint": "th-pr.oxylabs.io",
       "port": "20000",
-      "completeUrl": "th-pr.oxylabs.io:20000"
+      "completeUrl": "th-pr.oxylabs.io:20000",
+      "stickyUrl" : "th-pr.oxylabs.io:20001 - 29999"
     },
     "South Korea": {
       "countryName": "South Korea",
       "entryPoint": "kr-pr.oxylabs.io",
       "port": "30000",
-      "completeUrl": "kr-pr.oxylabs.io:30000"
+      "completeUrl": "kr-pr.oxylabs.io:30000",
+      "stickyUrl" : "kr-pr.oxylabs.io:30001 - 39999"
     },
     "Japan": {
       "countryName": "Japan",
       "entryPoint": "jp-pr.oxylabs.io",
       "port": "40000",
-      "completeUrl": "jp-pr.oxylabs.io:40000"
+      "completeUrl": "jp-pr.oxylabs.io:40000",
+      "stickyUrl" : "jp-pr.oxylabs.io:40001 - 49999"
     },
     "Philippines": {
       "countryName": "Philippines",
       "entryPoint": "ph-pr.oxylabs.io",
       "port": "10000",
-      "completeUrl": "ph-pr.oxylabs.io:10000"
+      "completeUrl": "ph-pr.oxylabs.io:10000",
+      "stickyUrl" : "ph-pr.oxylabs.io:10001 - 19999"
     },
     "Singapore": {
       "countryName": "Singapore",
       "entryPoint": "sg-pr.oxylabs.io",
       "port": "20000",
-      "completeUrl": "sg-pr.oxylabs.io:20000"
+      "completeUrl": "sg-pr.oxylabs.io:20000",
+      "stickyUrl" : "sg-pr.oxylabs.io:20001 - 29999"
     },
     "China": {
       "countryName": "China",
       "entryPoint": "cn-pr.oxylabs.io",
       "port": "30000",
-      "completeUrl": "cn-pr.oxylabs.io:30000"
+      "completeUrl": "cn-pr.oxylabs.io:30000",
+      "stickyUrl" : "cn-pr.oxylabs.io:30001 - 39999"
     },
     "Honk Kong": {
       "countryName": "Honk Kong",
       "entryPoint": "hk-pr.oxylabs.io",
       "port": "40000",
-      "completeUrl": "hk-pr.oxylabs.io:40000"
+      "completeUrl": "hk-pr.oxylabs.io:40000",
+      "stickyUrl" : "hk-pr.oxylabs.io:40001 - 49999"
     },
     "Taiwan": {
       "countryName": "Taiwan",
       "entryPoint": "tw-pr.oxylabs.io",
       "port": "10000",
-      "completeUrl": "tw-pr.oxylabs.io:10000"
+      "completeUrl": "tw-pr.oxylabs.io:10000",
+      "stickyUrl" : "tw-pr.oxylabs.io:10001 - 19999"
     },
     "India": {
       "countryName": "India",
       "entryPoint": "in-pr.oxylabs.io",
       "port": "20000",
-      "completeUrl": "in-pr.oxylabs.io:20000"
+      "completeUrl": "in-pr.oxylabs.io:20000",
+      "stickyUrl" : "in-pr.oxylabs.io:20001 - 29999"
     },
     "Pakistan": {
       "countryName": "Pakistan",
       "entryPoint": "pk-pr.oxylabs.io",
       "port": "30000",
-      "completeUrl": "pk-pr.oxylabs.io:30000"
+      "completeUrl": "pk-pr.oxylabs.io:30000",
+      "stickyUrl" : "pk-pr.oxylabs.io:30001 - 39999"
     },
     "Iran": {
       "countryName": "Iran",
       "entryPoint": "ir-pr.oxylabs.io",
       "port": "40000",
-      "completeUrl": "ir-pr.oxylabs.io:40000"
+      "completeUrl": "ir-pr.oxylabs.io:40000",
+      "stickyUrl" : "ir-pr.oxylabs.io:40001 - 49999"
     },
     "Indonesia": {
       "countryName": "Indonesia",
       "entryPoint": "id-pr.oxylabs.io",
       "port": "10000",
-      "completeUrl": "id-pr.oxylabs.io:10000"
+      "completeUrl": "id-pr.oxylabs.io:10000",
+      "stickyUrl" : "id-pr.oxylabs.io:10001 - 19999"
     },
     "Azerbaijan": {
       "countryName": "Azerbaijan",
       "entryPoint": "az-pr.oxylabs.io",
       "port": "20000",
-      "completeUrl": "az-pr.oxylabs.io:20000"
+      "completeUrl": "az-pr.oxylabs.io:20000",
+      "stickyUrl" : "az-pr.oxylabs.io:20001 - 29999"
     },
     "Kazakhstan": {
       "countryName": "Kazakhstan",
       "entryPoint": "kz-pr.oxylabs.io",
       "port": "30000",
-      "completeUrl": "kz-pr.oxylabs.io:30000"
+      "completeUrl": "kz-pr.oxylabs.io:30000",
+      "stickyUrl" : "kz-pr.oxylabs.io:30001 - 39999"
     },
     "UAE": {
       "countryName": "UAE",
       "entryPoint": "ae-pr.oxylabs.io",
       "port": "40000",
-      "completeUrl": "ae-pr.oxylabs.io:40000"
+      "completeUrl": "ae-pr.oxylabs.io:40000",
+      "stickyUrl" : "ae-pr.oxylabs.io:40001 - 49999"
     },
     "Mexico": {
       "countryName": "Mexico",
       "entryPoint": "mx-pr.oxylabs.io",
       "port": "10000",
-      "completeUrl": "mx-pr.oxylabs.io:10000"
+      "completeUrl": "mx-pr.oxylabs.io:10000",
+      "stickyUrl" : "mx-pr.oxylabs.io:10001 - 19999"
     },
     "Brazil": {
       "countryName": "Brazil",
       "entryPoint": "br-pr.oxylabs.io",
       "port": "20000",
-      "completeUrl": "br-pr.oxylabs.io:20000"
+      "completeUrl": "br-pr.oxylabs.io:20000",
+      "stickyUrl" : "br-pr.oxylabs.io:20001 - 29999"
     },
     "Argentina": {
       "countryName": "Argentina",
       "entryPoint": "ar-pr.oxylabs.io",
       "port": "30000",
-      "completeUrl": "ar-pr.oxylabs.io:30000"
+      "completeUrl": "ar-pr.oxylabs.io:30000",
+      "stickyUrl" : "ar-pr.oxylabs.io:30001 - 39999"
     },
     "Chile": {
       "countryName": "Chile",
       "entryPoint": "cl-pr.oxylabs.io",
       "port": "40000",
-      "completeUrl": "cl-pr.oxylabs.io:40000"
+      "completeUrl": "cl-pr.oxylabs.io:40000",
+      "stickyUrl" : "cl-pr.oxylabs.io:40001 - 49999"
     },
     "Peru": {
       "countryName": "Peru",
       "entryPoint": "pe-pr.oxylabs.io",
       "port": "10000",
-      "completeUrl": "pe-pr.oxylabs.io:10000"
+      "completeUrl": "pe-pr.oxylabs.io:10000",
+      "stickyUrl" : "pe-pr.oxylabs.io:10001 - 19999"
     },
     "Ecuador": {
       "countryName": "Ecuador",
       "entryPoint": "ec-pr.oxylabs.io",
       "port": "20000",
-      "completeUrl": "ec-pr.oxylabs.io:20000"
+      "completeUrl": "ec-pr.oxylabs.io:20000",
+      "stickyUrl" : "ec-pr.oxylabs.io:20001 - 29999",
     },
     "Colombia": {
       "countryName": "Colombia",
       "entryPoint": "co-pr.oxylabs.io",
       "port": "30000",
-      "completeUrl": "co-pr.oxylabs.io:30000"
+      "completeUrl": "co-pr.oxylabs.io:30000",
+      "stickyUrl" : "co-pr.oxylabs.io:30001 - 39999"
     },
     "South Africa": {
       "countryName": "South Africa",
       "entryPoint": "za-pr.oxylabs.io",
       "port": "40000",
-      "completeUrl": "za-pr.oxylabs.io:40000"
+      "completeUrl": "za-pr.oxylabs.io:40000",
+      "stickyUrl" : "za-pr.oxylabs.io:40001 - 49999"
     },
     "Egypt": {
       "countryName": "Egypt",
       "entryPoint": "eg-pr.oxylabs.io",
       "port": "10000",
-      "completeUrl": "eg-pr.oxylabs.io:10000"
+      "completeUrl": "eg-pr.oxylabs.io:10000",
+      "stickyUrl" : "eg-pr.oxylabs.io:10001 - 19999"
     },
     "Saudi Arabia": {
       "countryName": "Saudi Arabia",
       "entryPoint": "sa-pr.oxylabs.io",
       "port": "44000",
-      "completeUrl": "sa-pr.oxylabs.io:44000"
+      "completeUrl": "sa-pr.oxylabs.io:44000",
+      "stickyUrl" : "sa-pr.oxylabs.io:44001 - 44999"
     },
     "Denmark": {
       "countryName": "Denmark",
       "entryPoint": "dk-pr.oxylabs.io",
       "port": "19000",
-      "completeUrl": "dk-pr.oxylabs.io:19000"
+      "completeUrl": "dk-pr.oxylabs.io:19000",
+      "stickyUrl" : "dk-pr.oxylabs.io:19001 - 19999"
     },
     "Angola": {
       "countryName": "Angola",
       "entryPoint": "ao-pr.oxylabs.io",
       "port": "40000",
-      "completeUrl": "ao-pr.oxylabs.io:40000"
+      "completeUrl": "ao-pr.oxylabs.io:40000",
     },
     "Cameroon": {
       "countryName": "Cameroon",
       "entryPoint": "cm-pr.oxylabs.io",
       "port": "41000",
-      "completeUrl": "cm-pr.oxylabs.io:41000"
+      "completeUrl": "cm-pr.oxylabs.io:41000",
     },
     "Central African Republic": {
       "countryName": "Central African Republic",
       "entryPoint": "cf-pr.oxylabs.io",
       "port": "42000",
-      "completeUrl": "cf-pr.oxylabs.io:42000"
+      "completeUrl": "cf-pr.oxylabs.io:42000",
     },
     "Chad": {
       "countryName": "Chad",
       "entryPoint": "td-pr.oxylabs.io",
       "port": "43000",
-      "completeUrl": "td-pr.oxylabs.io:43000"
+      "completeUrl": "td-pr.oxylabs.io:43000",
     },
     "Benin": {
       "countryName": "Benin",
       "entryPoint": "bj-pr.oxylabs.io",
       "port": "44000",
-      "completeUrl": "bj-pr.oxylabs.io:44000"
+      "completeUrl": "bj-pr.oxylabs.io:44000",
     },
     "Ethiopia": {
       "countryName": "Ethiopia",
       "entryPoint": "et-pr.oxylabs.io",
       "port": "45000",
-      "completeUrl": "et-pr.oxylabs.io:45000"
+      "completeUrl": "et-pr.oxylabs.io:45000",
     },
     "Djibouti": {
       "countryName": "Djibouti",
       "entryPoint": "dj-pr.oxylabs.io",
       "port": "46000",
-      "completeUrl": "dj-pr.oxylabs.io:46000"
+      "completeUrl": "dj-pr.oxylabs.io:46000",
     },
     "Gambia": {
       "countryName": "Gambia",
       "entryPoint": "gm-pr.oxylabs.io",
       "port": "47000",
-      "completeUrl": "gm-pr.oxylabs.io:47000"
+      "completeUrl": "gm-pr.oxylabs.io:47000",
+      "stickyUrl" : "pe-pr.oxylabs.io:10001 - 19999"
     },
     "Ghana": {
       "countryName": "Ghana",
       "entryPoint": "gh-pr.oxylabs.io",
       "port": "48000",
-      "completeUrl": "gh-pr.oxylabs.io:48000"
+      "completeUrl": "gh-pr.oxylabs.io:48000",
+      "stickyUrl" : "pe-pr.oxylabs.io:10001 - 19999"
     },
     "Cte d'Ivoire": {
       "countryName": "Cte d'Ivoire",
