@@ -19,7 +19,7 @@ function UsageProgressCircle (props) {
     const circumference = 2 * Math.PI * radius;
 
     useEffect(() => {
-        const progressOffset = ((100 - progress) / 100) * circumference;
+        const progressOffset = ((100 - progress) / 100) * circumference + 500;
         setOffset(progressOffset);
     }, [setOffset, circumference, progress, offset]);
 
