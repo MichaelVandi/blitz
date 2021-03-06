@@ -36,7 +36,7 @@ function App() {
     historyList.push(<History history={item} key={index}/>)
   })
   return (
-    <div style={styles.background}>
+    <div style={styles.background} class="bg_image">
       {/* Main Dashboard components */}
       
       <div>
@@ -49,7 +49,7 @@ function App() {
               <Col md={3}>
                 <div style={styles.progressCircleBackground}>
                     <UsageProgressCircle
-                      progress={50}
+                      progress={70}
                       size={200}
                       strokeWidth={15}
                       circleOneStroke="rgba(18,19,20,1)"

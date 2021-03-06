@@ -1,4 +1,5 @@
 import Title from './title';
+import React, { useState, useEffect } from 'react';
 // import ReactSlider from 'react-slider';
 import Button from './button';
 import PropTypes from 'prop-types';
@@ -15,32 +16,17 @@ const useStyles = makeStyles((theme) => ({
     },
   }));
 
-  function ValueLabelComponent(props) {
-    const { children, open, value } = props;
-  
-    return (
-      <Tooltip open={open} enterTouchDelay={0} placement="top" title={value}>
-        {children}
-      </Tooltip>
-    );
-  }
 
-  ValueLabelComponent.propTypes = {
-    children: PropTypes.element.isRequired,
-    open: PropTypes.bool.isRequired,
-    value: PropTypes.number.isRequired,
-  };
-  
   const PrettoSlider = withStyles({
     root: {
-      color: '#52af77',
+      color: '#9d0b0b',
       height: 8,
     },
     thumb: {
       height: 24,
       width: 24,
-      backgroundColor: '#fff',
-      border: '2px solid currentColor',
+      backgroundColor: '#9d0b0b',
+      border: '2px solid grey',
       marginTop: -8,
       marginLeft: -12,
       '&:focus, &:hover, &$active': {
@@ -54,24 +40,35 @@ const useStyles = makeStyles((theme) => ({
     track: {
       height: 8,
       borderRadius: 4,
+      color: 'white',
     },
     rail: {
       height: 8,
       borderRadius: 4,
+      color: 'white',
     },
   })(Slider);
   
 
 function TopUp () {
+    const [selectedValue, setSelectedValue] = React.useState(20);
+    const handleValueChange = (event, newValue) => {
+      // console.log('Current Value ' + newValue);
+      setSelectedValue(newValue);
+    }
+    const onPurchaseClick = () => {
+      alert('Purchasing ' + selectedValue + ' GB');
+    }
     return (
         <div style ={styles.container}>
             <Title text="Top Up Data"/>
             
             <div style={{width: "90%"}}>
-                <PrettoSlider valueLabelDisplay="auto" aria-label="pretto slider" defaultValue={20} />
+                <PrettoSlider valueLabelDisplay="auto" aria-label="pretto slider" 
+                defaultValue={20}  onChange={handleValueChange}/>
             </div>
             
-             <Button text="Purchase" color="red" fontSize={20} width="90%"/>
+             <Button onClick={onPurchaseClick} text="Purchase" color="red" fontSize={20} width="90%"/>
 
         </div>
     );
