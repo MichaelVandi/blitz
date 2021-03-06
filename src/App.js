@@ -35,6 +35,18 @@ function App() {
     console.log("I am doing");
     historyList.push(<History history={item} key={index}/>)
   })
+  var totalGB, usedGB, progress;
+  const getTotalGB = () => {
+    totalGB = 100;
+  }
+  const getUsedGB = () => {
+    usedGB = 24;
+  }
+  
+  const calculateProgress = () => {
+    progress = getUsedGB / getTotalGB * 100;
+  }
+  calculateProgress();
   return (
     <div style={styles.background} class="bg_image">
       {/* Main Dashboard components */}
@@ -46,10 +58,12 @@ function App() {
 
             <Row className='justify-content-md-center'>
               {/* Progress circle goes here */}
-              <Col md={3}>
+              <Col lg={3}>
                 <div style={styles.progressCircleBackground}>
                     <UsageProgressCircle
-                      progress={70}
+                      progress={50}
+                      totalGB = {100}
+                      usedGB = {50}
                       size={200}
                       strokeWidth={15}
                       circleOneStroke="rgba(18,19,20,1)"
@@ -61,7 +75,7 @@ function App() {
               </Col>
 
               {/* Usage History Goes Here */}
-              <Col md={6}>
+              <Col lg={6}>
                 <div style={styles.componentBackground}>
                   <UsageHistoryChart data={chartData}/>
 
@@ -71,7 +85,7 @@ function App() {
               </Col>
 
               {/* Top up data goes here */}
-              <Col md={3}>
+              <Col lg={3}>
                 <div style={styles.componentBackground}>
                   <TopUp/>
 
@@ -82,7 +96,7 @@ function App() {
 
             <Row className='justify-content-md-center'>
               {/* Generate Proxies goes here */}
-              <Col md={9}>
+              <Col lg={9}>
                 <div style={styles.componentBackground}>      
                   <GenerateProxies/>
                 </div>
@@ -90,7 +104,7 @@ function App() {
               </Col>
 
               {/* Order History Goes here */}
-              <Col md={3}>
+              <Col lg={3}>
                 <div style={styles.componentBackground}>
                   <OrderHistory historyList={historyList}/>
 
@@ -123,6 +137,7 @@ const styles = {
     backgroundColor: '#04060c',
     height: '100vh',
     width: '100%',
+    overflowY: 'scroll',
   },
   container: {
     backgroundColor: '#04060c',

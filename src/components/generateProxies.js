@@ -201,21 +201,7 @@ function GenerateProxies () {
                         </NativeSelect>
                     </FormControl>
 
-                    {/* City */}
-                    <FormControl className={classes.margin} style={{padding: 0, margin: 0, marginTop: 5,}}>
-                        {/* <InputLabel htmlFor="demo-customized-select-native">Proxy Type</InputLabel> */}
-                        <NativeSelect
-                        id="demo-customized-select-native"
-                        // value={}
-                        // onChange={}
-                        input={<BootstrapInput />}
-                        >
-                        {/* <option aria-label="None" value="Proxy Type"/> */}
-                        <option aria-label="None" style={{color: '#292929'}} value={10}>City</option>
-                        <option style={{color: '#292929'}}value={20}>London</option>
-                        <option style={{color: '#292929'}}value={30}>New York</option>
-                        </NativeSelect>
-                    </FormControl>
+                   
 
                     <FormControl className={classes.margin} style={{padding: 0, margin: 0, marginTop: 5,}}>
                         {/* <InputLabel htmlFor="demo-customized-textbox">Quantity</InputLabel> */}
@@ -306,7 +292,7 @@ const styles = {
     buttonDiv: {
         // border: '1px solid blue',
         paddingRight: 30,
-        width: '65%',
+        width: '70%',
         display: 'flex',
         flexDirection: 'row',
         paddingBottom: 15,
@@ -315,7 +301,7 @@ const styles = {
     totalDiv: {
         // border: '1px  solid yellow',
         paddingLeft: 30,
-        width: '35%'
+        width: '30%'
     },
     totalText: {
         color: '#d1d1d1',

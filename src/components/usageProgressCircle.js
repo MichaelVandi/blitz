@@ -13,7 +13,10 @@ function UsageProgressCircle (props) {
         strokeWidth, 
         circleOneStroke, 
         circleTwoStroke,
+        usedGB,
+        totalGB,
     } = props;
+    
     const center = size / 2;
     const radius = size / 2 - strokeWidth / 2;
     const circumference = 2 * Math.PI * radius;
@@ -46,10 +49,27 @@ function UsageProgressCircle (props) {
                 />
 
                 <text 
+                fontStyle='normal'
+                    x={`${center}`} 
+                    y={`${center - 35}`} 
+                    className="svg-circle-text">
+                        
+                    {usedGB} { "GB"}
+                </text>
+
+                <text
                     x={`${center}`} 
                     y={`${center}`} 
                     className="svg-circle-text">
-                        {progress}%
+                    {"out of "} {totalGB} {"GB"}
+                </text>
+
+                <text
+                    x={`${center}`} 
+                    y={`${center + 35}`} 
+                    className="svg-circle-text-used">
+                    Used
+                    
                 </text>
 
             </svg>

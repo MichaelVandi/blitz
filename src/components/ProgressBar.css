@@ -12,8 +12,14 @@
     fill: none;
 }
 .svg-circle-text {
-   font-size: 2rem;
+   font-size: 1.5rem;
     text-anchor: middle;
     fill: #fff;
     font-weight: bold;
 }
+.svg-circle-text-used {
+    font-size: 1.5rem;
+     text-anchor: middle;
+     fill: #767676;
+     font-weight: normal;
+ }
