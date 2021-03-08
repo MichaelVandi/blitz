@@ -129,7 +129,7 @@ function GenerateProxies () {
                 }
 
                 console.log(number);
-                newUrl = stickyUrl.substring(stickyUrl.length - 13, stickyUrl.length) + ':' + number + ':' + 
+                newUrl = stickyUrl.substring(0, 16) + ':' + number + ':' + 
                     'customer-' + username + '-sessid-hw' + sessionId + ':' + password + '\n';
 
             } else if (type === 'Sticky2') {
@@ -273,21 +273,26 @@ const styles = {
         height: '75%',
         display: 'flex',
         flexDirection: 'column',
+        border: '1.5px solid #232426',
+        padding: 5,
+        borderRadius: 25,
         // borderColor: '#232426',
         // borderWidth: 1,
         // justifyContent: 'center', 
+        backgroundColor: '#181819',
         alignItems: 'center'
     },
     textField: {
-        width: '100%', 
+        width: '98%', 
         height: '99%', 
         resize: 'none',
         outline: 'none',
         padding: 10,
-        border: '1.5px solid #232426',
-        borderRadius: 25,
+        border: 'none',
+        // border: '1.5px solid #232426',
+        // borderRadius: 25,
         color: 'white',
-        backgroundColor: '#181819',
+        backgroundColor: 'transparent',
     },
     buttonDiv: {
         // border: '1px solid blue',

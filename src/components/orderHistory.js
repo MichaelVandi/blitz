@@ -46,20 +46,26 @@ function OrderHistory (props) {
     return (
         <div style ={styles.container}>
             <Title text="Order History"/>
-            <div style={styles.headerContainer}>
-                <div>   
-                    <Text text="Date Purchased" color="#9f9292" style_="bold" size={18} weight="bold"/>
+           
+            <div style={styles.mainHistoryContainer}>
+                
+                <div style={styles.headerContainer}>
+                    <div style={styles.purchaseDiv}>   
+                        <Text text="Purchase Date" color="#9f9292" style_="bold" size={18} weight="bold"/>
+                    </div>
+                    
+                    <div style={styles.dataDiv}>
+                        <Text text="Data" color="#9f9292" style_="bold" size={18} weight="bold"/>
+                    </div>
+                    <div style={styles.transIDDiv}>
+                        <Text text="Trans. ID" color="#9f9292" style_="bold" size={18} weight="bold"/>
+                    </div>
+                </div>
+
+                <div style={styles.historyContainer}>
+                    {props.historyList}
                 </div>
                 
-                <div>
-                    <Text text="Data" color="#9f9292" style_="bold" size={18} weight="bold"/>
-                </div>
-                <div>
-                    <Text text="Trans. ID" color="#9f9292" style_="bold" size={18} weight="bold"/>
-                </div>
-            </div>
-            <div style={styles.historyContainer}>
-                {props.historyList}
             </div>
             
 
@@ -74,8 +80,22 @@ const styles = {
         paddingBottom: 0,
         display: 'flex',
         flexDirection: 'row',
-        justifyContent: 'space-between',
         alignItems: 'center',
+        // border: '1px solid yellow'
+    },
+    purchaseDiv: {
+        width: '50%',
+        alignItems: 'left',
+    },
+    dataDiv:{
+        width: '20%',
+        alignItems: 'left',
+        
+    },
+    transIDDiv: {
+        width: '30%',
+        alignItems: 'left',
+        marginRight: 9,
     },
     internalDiv: {
         width: '33%',
@@ -93,13 +113,24 @@ const styles = {
         alignItems: 'center',
         // justifyContent: 'space-between',
     }, historyContainer: {
-        width: '100%',
+        width: '95%',
         height: '99%',
         display: 'flex',
         // border: '1px solid yellow',
         flexDirection: 'column',
         alignItems: 'center',
         overflowY: 'scroll',
+        // border: '1px solid yellow'
+        // justifyContent: 'space-between',
+    },
+    mainHistoryContainer: {
+        width: '100%',
+        height: '80%',
+        // border: '1px solid yellow',
+        display: 'flex',
+        // border: '1px solid yellow',
+        flexDirection: 'column',
+        alignItems: 'center',
         // justifyContent: 'space-between',
     }
 }

@@ -6,9 +6,18 @@ function History (props) {
     var data = props.history.data + "GB";
     return (
         <div style ={styles.container}>
-            <Text text={props.history.date} color="#d4d3d3" style_="normal" size={20}/>
-            <Text text={data} color="#d4d3d3" style_="normal" size={20}/>
-            <Text text={props.history.transID} color="#d4d3d3" style_="normal" size={20}/>
+            <div style={styles.purchaseDiv}>
+                <Text text={props.history.date} color="#d4d3d3" style_="normal" size={20}/>
+            </div>
+            <div style={styles.dataDiv}>
+                <Text text={data} color="#d4d3d3" style_="normal" size={20}/>
+            </div>
+            <div style={styles.transIDDiv}>
+                <Text text={props.history.transID} color="#d4d3d3" style_="normal" size={20}/>
+            </div>
+
+
+
         </div>
     );
 };
@@ -19,10 +28,21 @@ const styles = {
         padding: 5,
         display: 'flex',
         flexDirection: 'row',
-        justifyContent: 'space-between',
         alignItems: 'center',
         // justifyContent: 'space-between',
-    }
+    },
+    purchaseDiv: {
+        width: '50%',
+        alignItems: 'left',
+    },
+    dataDiv:{
+        width: '20%',
+        alignItems: 'left',
+    },
+    transIDDiv: {
+        width: '30%',
+        alignItems: 'left',
+    },
 }
 
 
